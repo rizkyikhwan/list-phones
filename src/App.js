@@ -5,6 +5,7 @@ import Brands from "./pages/Brands";
 import BrandsDetail from "./pages/BrandsDetail";
 import DetailPage from "./pages/DetailPage";
 import Home from "./pages/Home";
+import NotFound from "./components/NotFound";
 
 function Wrapper({ children }) {
   const location = useLocation();
@@ -25,6 +26,7 @@ function App() {
           <Route path="brands" element={<Brands />} />
           <Route path="brand/:slug" element={<BrandsDetail />} />
           <Route path="phone/:slug" element={<DetailPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </Wrapper>
